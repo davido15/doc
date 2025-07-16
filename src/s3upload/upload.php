@@ -232,18 +232,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 
                 // Send verification code email to requestor
                 try {
+                    require_once __DIR__ . '/../notifications/config.php';
                     $notificationHandler = new NotificationHandler($mysqli);
-                    $subject = "Document Code";
-                    $body = "
-                        <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;'>
-                            <h2 style='color: #333;'>Document Code</h2>
-                            <p>Your document code is: <strong style='font-size: 24px; color: #007bff;'>" . $verification_code . "</strong></p>
-                            <p>Please keep this code safe for tracking your document.</p>
-                            <hr>
-                            <p style='color: #666; font-size: 12px;'>This is an automated message, please do not reply.</p>
-                        </div>
-                    ";
-                    $notificationHandler->sendEmail($email, $subject, $body);
+                    $subject = OTP_EMAIL_SUBJECT;
+                    $body = str_replace('{OTP}', $verification_code, OTP_EMAIL_TEMPLATE);
+                    // Send to user in session
+                    $notificationHandler->sendEmail($_SESSION['email'], $subject, $body);
+                    // Send to admin
+                    $notificationHandler->sendEmail("daviddors12@gmail.com", $subject, $body);
                 } catch (Exception $emailError) {
                     error_log("Failed to send verification code email: " . $emailError->getMessage());
                 }
