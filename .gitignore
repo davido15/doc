@@ -1,0 +1,19 @@
+# Environment variables
+.env
+
+# Logs
+logs/
+
+# Vendor directory
+vendor/
+
+# Composer
+composer.lock
+
+# IDE specific files
+.idea/
+.vscode/
+
+# OS specific files
+.DS_Store
+Thumbs.db 

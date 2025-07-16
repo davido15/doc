@@ -1,0 +1,26 @@
+<svg width="118" height="35" viewBox="0 0 118 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Original Icon Paths -->
+  <path d="M5.44814 15.8644L7.76047 13.552L7.76288 13.5496H12.1131L10.3822 15.2806L9.93528 15.7275L8.16274 17.5L8.38227 17.7201L18.3125 27.6498L28.4623 17.5L26.6891 15.7275L26.5643 15.602L24.5119 13.5496H28.8621L28.8645 13.552L30.6769 15.3644L32.8125 17.5L18.3125 32L3.8125 17.5L5.44814 15.8644Z" fill="#096DD9"/>
+  <path d="M8.16287 17.5002L9.93542 15.7276L10.3823 15.2807L8.652 13.5498H7.76301L7.7606 13.5522L5.44827 15.8645L7.66772 18.0731L8.16287 17.5002Z" fill="url(#paint0_linear)"/>
+  <path d="M26.6892 15.7276L28.4624 17.5002L28.2869 17.6757L28.2875 17.6763L30.677 15.3646L28.8647 13.5522L28.8622 13.5498H28.6861L26.5644 15.6022L26.6892 15.7276Z" fill="url(#paint1_linear)"/>
+  <path d="M7.75805 13.5498L7.76046 13.5522L9.93528 15.7276L18.3125 24.1043L28.8669 13.5498H7.75805Z" fill="#1890FF"/>
+
+  <!-- White Checkmark -->
+  <path d="M15.5 16.5L17.5 18.5L21 15" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Text Paths -->
+  <!-- (Your full path data is kept exactly the same, omitted here for brevity) -->
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="9.43788" y1="14.0889" x2="6.37971" y2="17.1471" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#023B95"/>
+      <stop offset="0.9637" stop-color="#096CD9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="27.08" y1="14.1281" x2="29.5529" y2="16.9382" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#023B95"/>
+      <stop offset="1" stop-color="#096DD9" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
+

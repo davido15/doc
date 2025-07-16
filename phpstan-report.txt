@@ -1,0 +1,619 @@
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   auth/debug_email.php                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+  :45    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   auth/forgot_password.php                
+ ------ ---------------------------------------- 
+  :16    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :21    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------- 
+  Line   auth/login.php                                   
+ ------ ------------------------------------------------- 
+  :27    Variable $mysqli might not be defined.           
+         🪪 variable.undefined                             
+  :29    Variable $mysqli might not be defined.           
+         🪪 variable.undefined                             
+  :47    Variable $hashed_password might not be defined.  
+         🪪 variable.undefined                             
+  :47    Variable $is_verified might not be defined.      
+         🪪 variable.undefined                             
+  :47    Variable $organization_id might not be defined.  
+         🪪 variable.undefined                             
+  :47    Variable $status might not be defined.           
+         🪪 variable.undefined                             
+  :47    Variable $user_id might not be defined.          
+         🪪 variable.undefined                             
+  :51    Variable $status might not be defined.           
+         🪪 variable.undefined                             
+  :56    Variable $hashed_password might not be defined.  
+         🪪 variable.undefined                             
+  :62    Variable $is_verified might not be defined.      
+         🪪 variable.undefined                             
+  :68    Variable $mysqli might not be defined.           
+         🪪 variable.undefined                             
+  :76    Variable $mysqli might not be defined.           
+         🪪 variable.undefined                             
+  :81    Variable $mysqli might not be defined.           
+         🪪 variable.undefined                             
+ ------ ------------------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   auth/register.php                       
+ ------ ---------------------------------------- 
+  :38    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :40    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :56    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :58    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :68    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :78    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :82    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   auth/reset_password.php                 
+ ------ ---------------------------------------- 
+  :16    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   auth/test_email.php                                                                             
+ ------ ------------------------------------------------------------------------------------------------ 
+  :12    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ -------------------------------------------- 
+  Line   auth/verify_email.php                       
+ ------ -------------------------------------------- 
+  :8     Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :13    Variable $email might not be defined.       
+         🪪 variable.undefined                        
+  :13    Variable $expires_at might not be defined.  
+         🪪 variable.undefined                        
+  :15    Variable $expires_at might not be defined.  
+         🪪 variable.undefined                        
+  :17    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :18    Variable $email might not be defined.       
+         🪪 variable.undefined                        
+  :22    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+ ------ -------------------------------------------- 
+
+ ------ -------------------------------------------- 
+  Line   auth/verify_otp.php                         
+ ------ -------------------------------------------- 
+  :16    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :30    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :34    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :39    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :41    Variable $mysqli might not be defined.      
+         🪪 variable.undefined                        
+  :46    Variable $org_id might not be defined.      
+         🪪 variable.undefined                        
+  :46    Variable $org_type might not be defined.    
+         🪪 variable.undefined                        
+  :46    Variable $user_email might not be defined.  
+         🪪 variable.undefined                        
+  :46    Variable $user_id might not be defined.     
+         🪪 variable.undefined                        
+  :48    Variable $user_id might not be defined.     
+         🪪 variable.undefined                        
+  :49    Variable $user_email might not be defined.  
+         🪪 variable.undefined                        
+  :50    Variable $org_id might not be defined.      
+         🪪 variable.undefined                        
+  :51    Variable $org_type might not be defined.    
+         🪪 variable.undefined                        
+ ------ -------------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   bank/dashboard.php                      
+ ------ ---------------------------------------- 
+  :14    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :20    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :26    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :167   Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   bank/logout.php                                                                                 
+ ------ ------------------------------------------------------------------------------------------------ 
+  :7     File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   bank/view_doc.php                       
+ ------ ---------------------------------------- 
+  :20    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :22    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :30    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :49    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :66    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/business_verifications.php    
+ ------ ---------------------------------------- 
+  :35    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :49    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :54    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   dashboard/download_business_report.php                                                          
+ ------ ------------------------------------------------------------------------------------------------ 
+  :19    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :58    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/index.php                     
+ ------ ---------------------------------------- 
+  :13    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :17    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   dashboard/logout.php                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+  :7     File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/org_add.php                   
+ ------ ---------------------------------------- 
+  :25    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :35    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/org_deactivate.php            
+ ------ ---------------------------------------- 
+  :21    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :34    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/org_update.php                
+ ------ ---------------------------------------- 
+  :28    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :38    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :45    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :53    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/user_deactivate.php           
+ ------ ---------------------------------------- 
+  :20    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :31    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :38    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :45    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   dashboard/user_update.php               
+ ------ ---------------------------------------- 
+  :32    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :42    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :49    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :57    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :65    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------ 
+  Line   dashboard/view_business_verification.php  
+ ------ ------------------------------------------ 
+  :19    Variable $mysqli might not be defined.    
+         🪪 variable.undefined                      
+ ------ ------------------------------------------ 
+
+ ------ ------------------------------------------------------- 
+  Line   embassy/all_verifications.php                          
+ ------ ------------------------------------------------------- 
+  :45    Variable $doc_id might not be defined.                 
+         🪪 variable.undefined                                   
+  :57    Variable $document might not be defined.               
+         🪪 variable.undefined                                   
+  :64    Variable $doc_id might not be defined.                 
+         🪪 variable.undefined                                   
+  :73    Variable $integrity_result might not be defined.       
+         🪪 variable.undefined                                   
+  :98    Variable $isIntegrityMaintained might not be defined.  
+         🪪 variable.undefined                                   
+ ------ ------------------------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   embassy/all_verifications_logic.php     
+ ------ ---------------------------------------- 
+  :29    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :48    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :103   Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/api/check_integrity.php                                                                 
+ ------ ------------------------------------------------------------------------------------------------ 
+  :1     File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   embassy/business_verification.php       
+ ------ ---------------------------------------- 
+  :33    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :40    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :58    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   embassy/dashboard.php                   
+ ------ ---------------------------------------- 
+  :25    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :26    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :27    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :37    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :42    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :50    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/debug_integrity.php                                                                     
+ ------ ------------------------------------------------------------------------------------------------ 
+  :19    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :43    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :74    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/download.php                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+  :13    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :83    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :103   File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   embassy/download_logs.php               
+ ------ ---------------------------------------- 
+  :11    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/download_report.php                                                                     
+ ------ ------------------------------------------------------------------------------------------------ 
+  :19    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :62    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/logout.php                                                                              
+ ------ ------------------------------------------------------------------------------------------------ 
+  :7     File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/test_insert.php                                                                         
+ ------ ------------------------------------------------------------------------------------------------ 
+  :20    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :32    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :37    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :42    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :54    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :59    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :64    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :81    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :87    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/test_verification.php                                                                   
+ ------ ------------------------------------------------------------------------------------------------ 
+  :23    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :49    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   embassy/verify.php                      
+ ------ ---------------------------------------- 
+  :29    Variable $doc_id might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   embassy/verify_document_content.php                                                             
+ ------ ------------------------------------------------------------------------------------------------ 
+  :71    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :117   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :125   Variable $signature might not be defined.                                                       
+         🪪 variable.undefined                                                                            
+  :131   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :154   File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   embassy/verify_logic.php                
+ ------ ---------------------------------------- 
+  :28    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   embassy/view_business_verification.php  
+ ------ ---------------------------------------- 
+  :20    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ --------------------------------------------- 
+  Line   embassy/view_doc.php                         
+ ------ --------------------------------------------- 
+  :91    Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :97    Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :101   Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :105   Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :109   Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :117   Variable $is_verified might not be defined.  
+         🪪 variable.undefined                         
+  :138   Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :142   Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :160   Variable $doc_id might not be defined.       
+         🪪 variable.undefined                         
+  :167   Variable $doc_id might not be defined.       
+         🪪 variable.undefined                         
+  :213   Variable $document might not be defined.     
+         🪪 variable.undefined                         
+  :272   Variable $mysqli might not be defined.       
+         🪪 variable.undefined                         
+  :277   Variable $doc_id might not be defined.       
+         🪪 variable.undefined                         
+  :282   Variable $doc_id might not be defined.       
+         🪪 variable.undefined                         
+  :352   Variable $mysqli might not be defined.       
+         🪪 variable.undefined                         
+  :357   Variable $doc_id might not be defined.       
+         🪪 variable.undefined                         
+ ------ --------------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   embassy/view_doc_logic.php              
+ ------ ---------------------------------------- 
+  :14    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+  :38    Variable $mysqli might not be defined.  
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   functions/create_verification_table.php                                                         
+ ------ ------------------------------------------------------------------------------------------------ 
+  :5     Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :18    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :21    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :25    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :31    File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   functions/insert_test_data.php                                                                  
+ ------ ------------------------------------------------------------------------------------------------ 
+  :18    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :20    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :46    Function generateDigitalSignature invoked with 0 parameters, 4 required.                        
+         🪪 arguments.count                                                                               
+  :48    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :50    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :71    Function generateDigitalSignature invoked with 0 parameters, 4 required.                        
+         🪪 arguments.count                                                                               
+  :73    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :75    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :94    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :96    Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :110   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :118   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :124   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :128   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :133   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :139   Variable $mysqli might not be defined.                                                          
+         🪪 variable.undefined                                                                            
+  :141   File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------ 
+  Line   functions/logger.php                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+  :8     File ends with a trailing whitespace. This may cause problems when running the code in the web  
+         browser. Remove the closing ?> mark or remove the whitespace.                                   
+         🪪 whitespace.fileEnd                                                                            
+ ------ ------------------------------------------------------------------------------------------------ 
+
+ ------ --------------------------------------------------------------------- 
+  Line   functions/signatures.php                                             
+ ------ --------------------------------------------------------------------- 
+  :43    Instantiated class KmsClient not found.                              
+         🪪 class.notFound                                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+  :75    Instantiated class KmsClient not found.                              
+         🪪 class.notFound                                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols   
+ ------ --------------------------------------------------------------------- 
+
+ ------ ----------------------------------------- 
+  Line   functions/update_verification_table.php  
+ ------ ----------------------------------------- 
+  :9     Variable $mysqli might not be defined.   
+         🪪 variable.undefined                     
+  :12    Variable $mysqli might not be defined.   
+         🪪 variable.undefined                     
+  :15    Variable $mysqli might not be defined.   
+         🪪 variable.undefined                     
+  :15    Variable $mysqli might not be defined.   
+         🪪 variable.undefined                     
+ ------ ----------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   notifications/PasswordResetHandler.php  
+ ------ ---------------------------------------- 
+  :82    Undefined variable: $email              
+         🪪 variable.undefined                    
+  :82    Undefined variable: $expiry             
+         🪪 variable.undefined                    
+  :86    Undefined variable: $expiry             
+         🪪 variable.undefined                    
+  :87    Undefined variable: $email              
+         🪪 variable.undefined                    
+  :91    Undefined variable: $email              
+         🪪 variable.undefined                    
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------------------------------------ 
+  Line   notifications/send_otp.php                                        
+ ------ ------------------------------------------------------------------ 
+  :3     Path in include() "send_sms" is not a file or it does not exist.  
+         🪪 include.fileNotFound                                            
+ ------ ------------------------------------------------------------------ 
+
+ ------ -------------------------------------------------------------------------------- 
+  Line   notifications/smtp_mailer.php                                                   
+ ------ -------------------------------------------------------------------------------- 
+  :4     Path in include() "../vendor/autoload.php" is not a file or it does not exist.  
+         🪪 include.fileNotFound                                                          
+ ------ -------------------------------------------------------------------------------- 
+
+ [ERROR] Found 182 errors                                                                                   
+
