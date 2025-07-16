@@ -1,6 +1,15 @@
 <?php
 // src/s3upload/db.php - Database configuration for upload functionality
 
+// Load environment type from .env file using dotenv
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+try {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
+    $dotenv->load();
+} catch (Exception $e) {
+    // .env file not found, continue with defaults
+}
 // Direct database credentials for upload
 
 $host = $_ENV['DB_HOST'] ;

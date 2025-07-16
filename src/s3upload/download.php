@@ -1,16 +1,8 @@
 <?php
 
-
-require_once __DIR__ . '/db.php';
-
 require __DIR__ . '/../../vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
-require_once __DIR__ . '/../functions/signatures.php';
-require_once __DIR__ . '/../functions/utils.php';
-
-// Suppress AWS SDK deprecation warning
-error_reporting(E_ALL & ~E_DEPRECATED);
 
 // Load environment variables from .env file
 $envFile = __DIR__ . '/../../.env';
@@ -24,6 +16,11 @@ if (file_exists($envFile)) {
         }
     }
 }
+
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../functions/signatures.php';
+require_once __DIR__ . '/../notifications/NotificationHandler.php';
 
 // AWS S3 config
 $awsKey = getenv('AWS_ACCESS_KEY_ID');
