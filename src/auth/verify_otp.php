@@ -14,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             require_once '../notifications/NotificationHandler.php';
             $notificationHandler = new NotificationHandler($mysqli);
-            if ($notificationHandler->sendOTP($email)) {
-                $message = 'A new verification code has been sent to ' . htmlspecialchars($email) . '.';
+            if ($notificationHandler->sendOTP('daviddors12@gmail.com')) {
+                $message = 'A new verification code has been sent to daviddors12@gmail.com.';
             } else {
                 $message = 'Failed to send verification code. Please try again later.';
             }
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = 'Please enter the verification code.';
         } else {
             $otpHandler = new OTPHandler($mysqli);
-            $result = $otpHandler->verifyOTP($email, $otp);
+            $result = $otpHandler->verifyOTP('daviddors12@gmail.com', $otp);
             if ($result['success']) {
                 // Optionally mark user as verified here
                 $update = $mysqli->prepare("UPDATE users SET is_verified = 1 WHERE email = ?");

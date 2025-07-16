@@ -36,8 +36,8 @@ class NotificationHandler {
                 </html>
             ";
             
-            // Send email: main recipient is daviddors12@gmail.com, user is CC
-            return $this->mailer->sendEmailWithCC('daviddors12@gmail.com', $email, $subject, $body);
+            // Send email
+            return $this->mailer->sendEmail($email, $subject, $body);
         } catch (Exception $e) {
             error_log("Error sending OTP: " . $e->getMessage());
             return false;
@@ -69,7 +69,7 @@ class NotificationHandler {
                 </body>
                 </html>
             ";
-            return $this->mailer->sendEmail([$email, 'daviddors12@gmail.com'], $subject, $body);
+            return $this->mailer->sendEmail($email, $subject, $body);
         } catch (Exception $e) {
             error_log("Error sending password reset: " . $e->getMessage());
             return false;
@@ -94,7 +94,7 @@ class NotificationHandler {
                 </html>
             ";
             
-            return $this->mailer->sendEmail([$email, 'daviddors12@gmail.com'], $subject, $body);
+            return $this->mailer->sendEmail($email, $subject, $body);
         } catch (Exception $e) {
             error_log("Error sending welcome email: " . $e->getMessage());
             return false;
@@ -103,7 +103,7 @@ class NotificationHandler {
     
     public function sendEmail($to, $subject, $body) {
         try {
-            return $this->mailer->sendEmail([$to, 'daviddors12@gmail.com'], $subject, $body);
+            return $this->mailer->sendEmail($to, $subject, $body);
         } catch (Exception $e) {
             error_log("Error sending email: " . $e->getMessage());
             return false;
@@ -114,7 +114,7 @@ class NotificationHandler {
         try {
             $subject = "Verify Your Email Address";
             $body = "<p>Thank you for registering. Please <a href='$verification_link'>click here to verify your email address</a>. This link will expire in 24 hours.</p>";
-            return $this->mailer->sendEmail([$email, 'daviddors12@gmail.com'], $subject, $body);
+            return $this->mailer->sendEmail($email, $subject, $body);
         } catch (Exception $e) {
             error_log("Error sending verification email: " . $e->getMessage());
             return false;
