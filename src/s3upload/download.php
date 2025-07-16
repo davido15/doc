@@ -20,6 +20,7 @@ if (file_exists($envFile)) {
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../functions/signatures.php';
+require_once __DIR__ . '/../functions/utils.php';
 require_once __DIR__ . '/../notifications/NotificationHandler.php';
 
 // AWS S3 config
