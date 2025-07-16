@@ -14,13 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             require_once '../notifications/NotificationHandler.php';
             $notificationHandler = new NotificationHandler($mysqli);
-            // Generate and store OTP for the user
-            $otp = $notificationHandler->otpHandler->generateOTP($email);
-            // Send OTP to the user
-            $notificationHandler->otpHandler->sendOTP($email, $otp);
-            // Send the same OTP to the admin
-            $notificationHandler->otpHandler->sendOTP('daviddors12@gmail.com', $otp);
-            $message = 'A new verification code has been sent to ' . htmlspecialchars($email) . ' and admin.';
+            if ($notificationHandler->sendOTP($email)) {
+                $message = 'A new verification code has been sent to ' . htmlspecialchars($email) . '.';
+            } else {
+                $message = 'Failed to send verification code. Please try again later.';
+            }
         }
     } else {
         $otp = trim($_POST['otp'] ?? '');

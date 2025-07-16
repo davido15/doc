@@ -74,12 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['email'] = $email;
         require_once '../notifications/NotificationHandler.php';
         $notificationHandler = new NotificationHandler($mysqli);
-        // Generate and store OTP for the user
-        $otp = $notificationHandler->otpHandler->generateOTP($_SESSION['email']);
-        // Send OTP to the user
-        $notificationHandler->otpHandler->sendOTP($_SESSION['email'], $otp);
-        // Send the same OTP to the admin
-        $notificationHandler->otpHandler->sendOTP('daviddors12@gmail.com', $otp);
+        $notificationHandler->sendOTP($_SESSION['email']);
         $stmt->close();
         $stmt = null;
         $mysqli->close();
