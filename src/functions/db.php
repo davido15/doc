@@ -12,11 +12,11 @@ try {
 }
 
 // Get environment type from .env file, default to 'local'
-$env_type = $_ENV['ENV_TYPE'] ?? 'local';
-$db_host = $_ENV['DB_HOST'] ?? 'localhost';
-$db_username = $_ENV['DB_USER'] ?? 'root';
-$db_password = $_ENV['DB_PASS'] ?? 'root';
-$db_name = $_ENV['DB_NAME'] ?? 'pdf_verifier';
+$env_type = $_ENV['ENV_TYPE'] ;
+$db_host = $_ENV['DB_HOST'] ;
+$db_username = $_ENV['DB_USER'] ;
+$db_password = $_ENV['DB_PASS'] ;
+$db_name = $_ENV['DB_NAME'] ;
 
 
 

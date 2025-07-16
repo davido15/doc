@@ -75,7 +75,25 @@ function generateFileHash($content) {
     return hash('sha256', $content);
 }
 
+session_start();
+if (empty($_SESSION['email'])) {
+    die("You must be logged in to upload files.");
+}
 
+// New: Check user's organization domain by joining users and organizations using email
+$user_email = $_SESSION['email'];
+$orgStmt = $mysqli->prepare("SELECT o.domain FROM users u JOIN organizations o ON u.organization_id = o.id WHERE u.email = ?");
+$orgStmt->bind_param("s", $user_email);
+$orgStmt->execute();
+$orgStmt->bind_result($org_domain);
+if ($orgStmt->fetch()) {
+    if (strtolower($org_domain) !== 'bank') {
+        die("You must be in a Bank organization to upload files.");
+    }
+} else {
+    die("User organization not found.");
+}
+$orgStmt->close();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
     $email = $_POST['email'] ?? '';

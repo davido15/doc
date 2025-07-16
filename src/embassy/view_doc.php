@@ -139,7 +139,7 @@
                       foreach ($file_urls as $url) {
                           $url = trim($url);
                           if (!empty($url)) {
-                              echo '<a href="download?key=' . htmlspecialchars(urlencode($url)) . '&code=' . htmlspecialchars($document['verification_code']) . '" class="list-group-item list-group-item-action" target="_blank">';
+                              echo '<a href="../s3upload/download.php?key=' . htmlspecialchars(urlencode($url)) . '&code=' . htmlspecialchars($document['verification_code']) . '" class="list-group-item list-group-item-action" target="_blank">';
                               echo '<i class="ti ti-file-text me-2"></i>' . basename($url);
                               echo '</a>';
                           }

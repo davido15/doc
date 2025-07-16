@@ -3,10 +3,11 @@
 
 // Direct database credentials for upload
 
-$host = $_ENV['DB_HOST'] ?? 'localhost';
-$username = $_ENV['DB_USER'] ?? 'root';
-$password = $_ENV['DB_PASS'] ?? 'root';
-$database = $_ENV['DB_NAME'] ?? 'pdf_verifier';
+$host = $_ENV['DB_HOST'] ;
+$username = $_ENV['DB_USER'] ;
+$password = $_ENV['DB_PASS'] ;
+$database = $_ENV['DB_NAME'] ;
+
 
 
 

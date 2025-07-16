@@ -1,5 +1,23 @@
 <?php
 session_start();
+if (empty($_SESSION['email'])) {
+    die("You must be logged in to download files.");
+}
+
+// New: Check user's organization domain by joining users and organizations using email
+$user_email = $_SESSION['email'];
+$orgStmt = $mysqli->prepare("SELECT o.domain FROM users u JOIN organizations o ON u.organization_id = o.id WHERE u.email = ?");
+$orgStmt->bind_param("s", $user_email);
+$orgStmt->execute();
+$orgStmt->bind_result($org_domain);
+if ($orgStmt->fetch()) {
+    if (strtolower($org_domain) !== 'embassy') {
+        die("You must be in an Embassy organization to download files.");
+    }
+} else {
+    die("User organization not found.");
+}
+$orgStmt->close();
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
