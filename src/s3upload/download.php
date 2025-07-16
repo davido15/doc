@@ -9,7 +9,7 @@ require_once __DIR__ . '/db.php';
 
 
 
-// New: Check user's organization domain by joining users and organizations using email
+/**New: Check user's organization domain by joining users and organizations using email
 $user_email = $_SESSION['email'];
 $orgStmt = $mysqli->prepare("SELECT o.domain FROM users u JOIN organizations o ON u.organization_id = o.id WHERE u.email = ?");
 $orgStmt->bind_param("s", $user_email);
@@ -22,7 +22,8 @@ if ($orgStmt->fetch()) {
 } else {
     die("User organization not found.");
 }
-$orgStmt->close();
+$orgStmt->close();**/
+
 require __DIR__ . '/../../vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
