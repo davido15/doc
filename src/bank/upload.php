@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id']) || $_SESSION['organization_id'] != 1) {
-    header("Location: logout.php");
+if (!isset($_SESSION['user_id']) || $_SESSION['organization_type'] !== 'Bank') {
+    header("Location: ../auth/login.php");
     exit();
 }
 ?>

@@ -1,8 +1,9 @@
 <?php
 
 session_start();
-if (empty($_SESSION['email'])) {
-    die("You must be logged in to download files.");
+if (!isset($_SESSION['user_id']) || $_SESSION['organization_type'] !== 'Embassy') {
+    header("Location: ../login.php");
+    exit();
 }
 require_once __DIR__ . '/db.php';
 

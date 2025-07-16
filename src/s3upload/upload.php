@@ -76,8 +76,9 @@ function generateFileHash($content) {
 }
 
 session_start();
-if (empty($_SESSION['email'])) {
-    die("You must be logged in to upload files.");
+if (!isset($_SESSION['user_id']) || $_SESSION['organization_type'] !== 'Bank') {
+    header("Location: ../login.php");
+    exit();
 }
 
 // New: Check user's organization domain by joining users and organizations using email
