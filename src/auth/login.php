@@ -200,7 +200,7 @@ alt="Verify Logo"></a>
                             <div class="form-group mb-3">
                                 <label class="form-label">Email Address</label>
                                 <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Enter your email" value="bank" required>
+                                    placeholder="Enter your email"  required>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="form-label">Password</label>
