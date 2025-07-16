@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: ../login.php");
+    exit();
+}
+$email = $_SESSION['email'];
 require __DIR__ . '/../../vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
@@ -122,7 +128,7 @@ if ($document) {
         // No automatic blocking during download to maintain normal workflow
 
         // Generate download signature for logging purposes only
-        $downloader_email = $_SESSION['email'] ?? 'anonymous';
+        $downloader_email = $_SESSION['email'] ?? $email;
         $ip_address = $_SERVER['REMOTE_ADDR'];
         $signatureData = generateDownloadSignature($document['file_hash'], time(), $downloader_email, $verificationCode, $ip_address);
 
