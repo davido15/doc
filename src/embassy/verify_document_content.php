@@ -2,7 +2,7 @@
 session_start();
 
 // Check if user is logged in and has embassy access
-if (!isset($_SESSION['user_id']) || $_SESSION['organization_type'] !== 'Embassy') {
+if (!isset($_SESSION['user_id']) || $_SESSION['organization_type'] !== 'Embassy')  {
     header("Location: ../login.php");
     exit();
 }
@@ -58,8 +58,19 @@ function verifyFileIntegrity($decryptedContent, $storedHash) {
     ];
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verify_content'])) {
-    $document_id = isset($_POST['document_id']) ? intval($_POST['document_id']) : 0;
+// Debug: Log session and POST data
+error_log('Session started: ' . (session_status() === PHP_SESSION_ACTIVE ? 'yes' : 'no'));
+error_log('POST: ' . print_r($_POST, true));
+error_log('SESSION: ' . print_r($_SESSION, true));
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    echo '<pre>' . print_r($_POST, true) . '</pre>';
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['verify_content'])) {
+    $document_id = isset($_GET['document_id']) ? intval($_GET['document_id']) : 0;
+    error_log('document_id: ' . $document_id);
     
     if (!$document_id) {
         header("Location: view_doc.php?id=" . $document_id . "&error=" . urlencode("Document ID is required"));
@@ -138,8 +149,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verify_content'])) {
             'document_id' => $document_id,
             'verification_time' => date('Y-m-d H:i:s')
         ];
-
+        error_log('Set verification_result in session: ' . print_r($_SESSION['verification_result'], true));
         // Redirect back to view document page
+        error_log('Redirecting to: view_doc.php?id=' . $document_id);
         header("Location: view_doc.php?id=" . $document_id);
         exit();
 

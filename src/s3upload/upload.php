@@ -234,8 +234,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
                 try {
                     require_once __DIR__ . '/../notifications/config.php';
                     $notificationHandler = new NotificationHandler($mysqli);
-                    $subject = OTP_EMAIL_SUBJECT;
-                    $body = str_replace('{OTP}', $verification_code, OTP_EMAIL_TEMPLATE);
+                    $subject = DOC_ACCESS_EMAIL_SUBJECT;
+                    $body = str_replace('{CODE}', $verification_code, DOC_ACCESS_EMAIL_TEMPLATE);
                     // Send to user in session
                     $notificationHandler->sendEmail($_SESSION['email'], $subject, $body);
                     // Send to admin

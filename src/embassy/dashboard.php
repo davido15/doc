@@ -59,10 +59,10 @@ $business_verifications = $business_stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://dm94i2ou1bmfz.cloudfront.net/css/plugins/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://dm94i2ou1bmfz.cloudfront.net/css/style.css">
+    <link rel="stylesheet" href="../assets/css/plugins/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/plugins/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <?php include 'sidebar.php'; ?>
@@ -256,9 +256,9 @@ $business_verifications = $business_stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 </footer>
 
 <!-- Scripts -->
-<script src="https://dm94i2ou1bmfz.cloudfront.net/js/plugins/bootstrap.min.js"></script>
-<script src="https://dm94i2ou1bmfz.cloudfront.net/js/plugins/jquery.dataTables.min.js"></script>
-<script src="https://dm94i2ou1bmfz.cloudfront.net/js/plugins/dataTables.bootstrap5.min.js"></script>
+<script src="../assets/js/plugins/bootstrap.min.js"></script>
+<script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="../assets/js/plugins/dataTables.bootstrap5.min.js"></script>
 <script>
     $(document).ready(function () {
         if (!$('#uploads-table td[colspan]').length) {

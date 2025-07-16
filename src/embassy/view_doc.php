@@ -156,7 +156,7 @@
                 <div class="row mt-2">
                   <div class="col-12">
                     <h6>Document Content Verification</h6>
-                    <form method="POST" action="verify_document_content.php" class="d-inline">
+                    <form method="GET" action="/src/embassy/verify_document_content.php" class="d-inline">
                       <input type="hidden" name="document_id" value="<?php echo $doc_id; ?>">
                       <button type="submit" name="verify_content" class="btn btn-warning">
                         <i class="ti ti-shield-check me-1"></i>

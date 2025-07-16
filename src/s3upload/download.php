@@ -1,8 +1,12 @@
 <?php
+
 session_start();
 if (empty($_SESSION['email'])) {
     die("You must be logged in to download files.");
 }
+require_once __DIR__ . '/db.php';
+
+
 
 // New: Check user's organization domain by joining users and organizations using email
 $user_email = $_SESSION['email'];
@@ -18,27 +22,40 @@ if ($orgStmt->fetch()) {
     die("User organization not found.");
 }
 $orgStmt->close();
-require 'vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
-require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/../functions/signatures.php';
 require_once __DIR__ . '/../functions/utils.php';
 
 // Suppress AWS SDK deprecation warning
 error_reporting(E_ALL & ~E_DEPRECATED);
 
+// Load environment variables from .env file
+$envFile = __DIR__ . '/../../.env';
+if (file_exists($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+            list($key, $value) = explode('=', $line, 2);
+            $_ENV[trim($key)] = trim($value);
+            putenv(trim($key) . '=' . trim($value));
+        }
+    }
+}
+
 // AWS S3 config
+$awsKey = getenv('AWS_ACCESS_KEY_ID');
+$awsSecret = getenv('AWS_SECRET_ACCESS_KEY');
 $s3 = new S3Client([
     'region'  => 'eu-north-1',
     'version' => 'latest',
     'credentials' => [
-        'key'    => $_ENV['AWS_ACCESS_KEY_ID'] ?? null,
-        'secret' => $_ENV['AWS_SECRET_ACCESS_KEY'] ?? null,
+        'key'    => $awsKey,
+        'secret' => $awsSecret,
     ],
     'suppress_php_deprecation_warning' => true,
 ]);
-
 $bucketName = 'pdfreceiverout';
 
 // Function to decrypt file content
@@ -100,7 +117,7 @@ $document = $stmt->get_result()->fetch_assoc();
 
 if ($document) {
     // Get encryption key
-    $encryptionKey = $_ENV['FILE_ENCRYPTION_KEY'] ?? null;
+    $encryptionKey = getenv('FILE_ENCRYPTION_KEY') ?: 'default-encryption-key-for-development';
     if (!$encryptionKey) {
         die("Encryption key not configured");
     }

@@ -11,7 +11,7 @@ require_once '../functions/db.php';
 $doc_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 // Get document details
-$stmt = $mysqli->prepare("SELECT * FROM uploads WHERE id = ? AND organization_id = ?");
+$stmt = $mysqli->prepare("SELECT * FROM uploads WHERE id = ? AND embassy_id = ?");
 $stmt->bind_param("ii", $doc_id, $_SESSION['organization_id']);
 $stmt->execute();
 $result = $stmt->get_result();

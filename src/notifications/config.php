@@ -35,8 +35,20 @@ define('OTP_EMAIL_SUBJECT', 'Your Verification Code - PDF Verifier');
 define('OTP_EMAIL_TEMPLATE', '
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333;">Verification Code</h2>
-        <p>Your verification code is: <strong style="font-size: 24px; color: #007bff;">{OTP}</strong></p>
-        <p>This code will expire in 5 minutes.</p>
+        <p>Your one-time password (OTP) is: <strong style="font-size: 24px; color: #007bff;">{OTP}</strong></p>
+        <p>This code will expire in 10 minutes.</p>
+        <p>If you did not request this code, please ignore this email.</p>
+        <hr>
+        <p style="color: #666; font-size: 12px;">This is an automated message, please do not reply.</p>
+    </div>
+');
+
+define('DOC_ACCESS_EMAIL_SUBJECT', 'Document Access Code');
+define('DOC_ACCESS_EMAIL_TEMPLATE', '
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #333;">Document Access Code</h2>
+        <p>Your document access code is: <strong style="font-size: 24px; color: #007bff;">{CODE}</strong></p>
+        <p>This code will expire in 6 months.</p>
         <p>If you did not request this code, please ignore this email.</p>
         <hr>
         <p style="color: #666; font-size: 12px;">This is an automated message, please do not reply.</p>
